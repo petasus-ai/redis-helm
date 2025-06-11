@@ -3,10 +3,53 @@ entries:
   redis:
   - annotations:
       category: Database
+      images: |
+        - name: kubectl
+          image: docker.io/bitnami/kubectl:1.33.1-debian-12-r5
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r46
+        - name: redis
+          image: docker.io/bitnami/redis:8.0.2-debian-12-r3
+        - name: redis-exporter
+          image: docker.io/bitnami/redis-exporter:1.74.0-debian-12-r0
+        - name: redis-sentinel
+          image: docker.io/bitnami/redis-sentinel:8.0.2-debian-12-r2
+      licenses: Apache-2.0
+      tanzuCategory: service
+    apiVersion: v2
+    appVersion: 8.0.2
+    created: "2025-06-11T04:59:57.949114101-04:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 4d49e72d1af2a2596a3752a6d9a2e58b5dfe6fee71ce94ac4e30ceeb4c2a5555
+    home: https://bitnami.com
+    icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: redis
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/redis
+    urls:
+    - redis-21.2.3.tgz
+    version: 21.2.3
+  - annotations:
+      category: Database
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.12
-    created: "2023-08-14T21:23:49.280585702-04:00"
+    created: "2025-06-11T04:59:57.939358501-04:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -32,4 +75,4 @@ entries:
     urls:
     - redis-17.15.3.tgz
     version: 17.15.3
-generated: "2023-08-14T21:23:49.272905628-04:00"
+generated: "2025-06-11T04:59:57.930033468-04:00"
